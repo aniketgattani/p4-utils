@@ -513,7 +513,7 @@ function do_ptf {
 function do_mininet {
     # Clone source
     cd $HOME
-    git clone git://github.com/mininet/mininet mininet
+    git clone https://github.com/mininet/mininet mininet
     cd mininet
 
     # Build mininet
@@ -579,10 +579,10 @@ if [ "$P4_RUNTIME" = true ]; then
     fi
     do_PI
 fi
+do_mininet
 do_bmv2
 do_p4c
 do_ptf
-do_mininet
 
 # Mininet installs Python2 which becomes the system default binary.
 # This sets again Python3 as the system default binary.
